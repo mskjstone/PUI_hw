@@ -1,0 +1,83 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-image: url("glasses-pillows-on-bed.png");
+    background-color: #ffffff;
+    color: #4a4a4a
+   }
+nav {
+    font-size: 21px;
+    color: #809BC6;
+    display: grid;
+    grid-template-columns: 277px 1fr 90px 59px 45px;
+    grid-template-areas: "logo . howto shop cart";
+    align-items: end;
+    grid-gap: 30px;
+}
+
+
+#logo{
+    grid-area: logo;
+    justify-self: start;
+}
+
+#howto{
+    grid-area: howto;
+    justify-self: end;
+}
+
+#shop{
+    grid-area: shop;
+    justify-self: end;
+}
+
+#cart{
+    grid-area: cart;
+    justify-self: end;
+}
+
+#bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+section {
+    display: grid;
+    grid-template: 515px 50px 50px 1fr / 813px 1fr;
+    grid-template-areas: "a b"
+                         "c d"
+                         "e f"
+                         "g h";
+}
+
+#home-big {
+    grid-area: b;
+    font-size: 48px;
+    font-weight: 400;
+    align-self: end;
+    padding-bottom: 20px;
+    /* float: right; */
+    /* margin: 370px 220px 10px 0px; */
+}
+
+#shop-button {
+    grid-area: d;
+    /* float: right; */
+    /* margin: 490px 0px 10px 490px; */
+}
+
+#home-med {
+    grid-area: e;
+    font-size: 30px;
+    /* margin-top: 550px; */
+    padding-bottom: 10px;
+}
+
+#home-small {
+    grid-area: g;
+    font-size: 21px;
+    font-weight: 300;
+}
