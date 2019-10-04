@@ -3,6 +3,7 @@ body {
     margin-left: 50px;
     margin-right: 50px;
     background-image: url("glasses-pillows-on-bed.png");
+    background-repeat: no-repeat;
     background-color: #ffffff;
     color: #4a4a4a
    }
@@ -46,7 +47,7 @@ nav {
 
 section {
     display: grid;
-    grid-template: 515px 50px 50px 1fr / 813px 1fr;
+    grid-template: 505px 50px 50px 1fr / 813px 1fr;
     grid-template-areas: "a b"
                          "c d"
                          "e f"
