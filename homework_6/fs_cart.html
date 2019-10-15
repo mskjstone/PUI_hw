@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Cart Checkout</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="cart_style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="logo" href="index.html"><img src="fs_logo.png" alt="logo"></a>
+            <a id="carrot">></a>
+            <a href="fs_cart.html" id="bread_crumb">CHECKOUT</a>
+            <a id = "howto">HOW-TO</a>
+            <a id = "shop">SHOP</a>
+            <a id= "cart"><img src="cart.png" alt="cart"></a>
+        </nav>
+        <img src="bar.png" alt="bar" id="bar">
+    </header>
+   <div class = "grid">
+       <div id = "flow">
+            <div>Great choices, style maven.</div>
+            <div>Ready to check out?</div>
+            <button>Sign in</button>
+            <div>OR</div>
+            <button>Guest checkout</button>
+        </div>
+        <div id = "cart_contents">
+            <h1>Your Cart</h1>
+            <div id="item1">
+                <button>x</button>
+                <div>Couch pillow</div>
+                <div id="price">$50</div>
+                <img src="cart_icon.png">
+                Color: Morning Haze
+                Fill: Poly
+                Qty:   <input type="text" name="qty" placeholder="2" size="3">
+                <button>UPDATE</button>
+                EDIT SELECTION
+            </div>
+            <div id="item2">
+                <button>x</button>
+                <div>Couch pillow</div>
+                <div id="price">$25</div>
+                <img src="cart_icon2.png">
+                Color: After School Special
+                Fill: Foam
+                Qty:   <input type="text" name="qty" placeholder="1" size="3">
+                <button>UPDATE</button>
+                EDIT SELECTION
+            </div>
+            <hr>
+            SUBTOTAL
+            $75
+            tax
+            $7.50
+            shipping
+            $5
+            <hr>
+            <button>Apply</button>
+            <input type="text" name='promo' placeholder="Have a promo code?">
+            <h3>TOTAL</h3>
+            $87.50
+        </div>
+   </div>     
+</body>
+</html>

@@ -1,0 +1,229 @@
+nav {
+    font-size: 21px;
+    color: #809BC6;
+    display: grid;
+    grid-template-columns: 307px 43px 132px 43px 132px 1fr 120px 89px 75px 30px;
+    grid-template-areas: "logo carrot bread_crumb carrot2 bread_crumb2 . howto shop cart cart_qty";
+    align-items: end;
+    /* grid-gap: 30px; */
+}
+
+#logo{
+    grid-area: logo;
+    justify-self: start;
+}
+
+#carrot{
+    grid-area: carrot;
+    justify-self: start;
+}
+
+#bread_crumb{
+    grid-area: bread_crumb;
+    justify-self: start;
+    color: inherit;
+}
+
+#bread_crumb2{
+    grid-area: bread_crumb2;
+    justify-self: start;
+    color: inherit;
+}
+
+#howto{
+    grid-area: howto;
+    justify-self: end;
+}
+
+#shop{
+    grid-area: shop;
+    justify-self: end;
+}
+
+#cart{
+    grid-area: cart;
+    justify-self: end;
+}
+
+#cart_qty{
+    grid-area: cart_qty;
+    justify-self: start;
+    align-self: flex-start;
+    color: #FFFFFF;
+    height: 30px;
+    width: 30px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+#bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+body {
+    background-image: url("product_background.png");
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+   }
+
+#pagegrid {
+    display: grid;
+    grid-template-columns: 158px repeat(3,89px) 180px repeat(4,89px) 290px;
+    grid-template-rows: 64px 62px 35px 32px 65px 42px 35px 88px 160px 120px;
+    justify-content: center;
+}
+
+#productmain {
+    grid-column: 2 / span 4;
+    grid-row: 2 / span 7;
+}
+
+#thumb1 {
+    grid-row-start: 9;
+    grid-column-start: 2;
+}
+
+#thumb2 {
+    grid-row-start: 9;
+    grid-column-start: 3;
+}
+
+#thumb3 {
+    grid-row-start: 9;
+    grid-column-start: 4;
+}
+
+#thumb4 {
+    grid-row-start: 9;
+    grid-column-start: 5;
+}
+
+#product {
+    grid-row-start: 2;
+    grid-column: span 3 / 9;
+}
+
+#price {
+    grid-row-start: 2;
+    grid-column-start: 9;
+    justify-self: end;
+    padding-right: 22px;
+}
+
+#product , #price {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#choosecolor {
+    grid-row-start: 3;
+    grid-column: 6 / span 3;
+    align-self: end;
+}
+
+#currentcolor {
+    grid-row-start: 4;
+    grid-column: 6 / span 3;
+}
+
+#color1 {
+    grid-row-start: 5;
+    grid-column-start: 6;
+    align-self: initial;
+}
+
+#color2 {
+    grid-row-start: 5;
+    grid-column-start: 7;
+    align-self: initial;
+}
+
+#color3 {
+    grid-row-start: 5;
+    grid-column-start: 8;
+    align-self: initial;
+}
+
+#color4 {
+    grid-row-start: 5;
+    grid-column-start: 9;
+    align-self: initial;
+}
+
+#fill {
+    grid-row-start: 6;
+    grid-column: 6 / span 3;
+    align-self: end;
+}
+
+#choosecolor , #fill {
+    font-size: 20px;
+}
+
+#currentfill {
+    grid-row-start: 7;
+    grid-column: 6 / span 3;
+}
+
+#currentcolor, #currentfill {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#fill1 {
+    grid-row-start: 8;
+    grid-column-start: 6;
+    align-self: initial;
+}
+
+#fill2 {
+    grid-row-start: 8;
+    grid-column-start: 7;
+    align-self: initial;
+}
+
+#fill3 {
+    grid-row-start: 8;
+    grid-column-start: 8;
+    align-self: initial;
+}
+
+#aboutfill {
+    grid-row-start: 9;
+    grid-column: 6 / span 4;
+    justify-self: center;
+    padding-right: 20px;
+    color: #A9A9A9
+}
+
+#sizing {
+    grid-row-start: 10;
+    grid-column: 6 / span 4;
+    justify-self: center;
+    padding-right: 20px;
+    color: #A9A9A9
+
+}
+
+#qty {
+    grid-row-start: 3;
+    grid-column-start: -2;
+    justify-self: end;
+}
+/* https://www.w3schools.com/howto/howto_custom_select.asp */
+
+#addtocart {
+    grid-row-start: 2;
+    grid-column-start: -2;
+    justify-self: end;
+
+}

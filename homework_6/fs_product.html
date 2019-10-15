@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Couch Pillows</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="fs_product_styles.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script src="product.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a id="logo" href="index.html"><img src="fs_logo.png" alt="logo"></a>
+            <a id="carrot">></a>
+            <a href="fs_gallery.html" id="bread_crumb">SHOP ALL</a>
+            <a id="carrot2">></a>
+            <a href="fs_product.html" id="bread_crumb2">COUCH</a>
+            <a id = "howto">HOW-TO</a>
+            <a id = "shop">SHOP</a>
+            <a id= "cart"><img src="cart.png" alt="cart"></a>
+            <a id = "cart_qty"></a>
+        </nav>
+        <img src="bar.png" alt="bar" id="bar">
+    </header>
+    <div id="pagegrid">
+        <img src="productmain.png" alt="neon pillow" id="productmain">
+        <img src="thumb1.png" alt="thumb1" id="thumb1">
+        <img src="thumb2.png" alt="thumb2" id="thumb2">
+        <img src="thumb3.png" alt="thumb3" id="thumb3">
+        <img src="thumb4.png" alt="thumb4" id="thumb4">
+        <div id="product">Couch Pillows</div>
+        <div id="price">$25</div>
+        <div id="choosecolor">Choose your color:</div>
+        <div id="currentcolor">Current selection: Morning Haze</div>
+        <img src="color1.png" alt="morning haze" id="color1">
+        <img src="color2.png" alt="after school special" id="color2">
+        <img src="color3.png" alt="cozy denim" id="color3">
+        <img src="color4.png" alt="rainy day" id="color4">
+        <div id="fill">Choose your fill:</div>
+        <div id="currentfill">Current selection: Poly fill</div>
+        <img src="fill1.png" alt="poly" id="fill1">
+        <img src="fill2.png" alt="down" id="fill2">
+        <img src="fill3.png" alt="foam" id="fill3">
+        <div id="aboutfill">
+            ABOUT THIS FILL<br>
+            <br>
+            Lorem ipsum dolor sit amet, eam veritus aliquando ea, ea viris nostro facilis his, mei placerat menandri omittantur an. Ut sed agam probatus assueverit.
+        </div>
+        <div id="sizing">
+            SIZING AND CARE<br>
+            <br>
+            Duo discere eripuit detraxit te, veritus molestie signiferumque eos ex, ludus vocent cu nam. Ea amet ornatus feugait sit.
+        </div>
+        <div id="qty">
+            <select id="qty_select">
+                <option value="0">Select qty:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <img src="addtocart.png" alt="addtocart" id="addtocart" onclick="addToCart()">
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+nav {
+    font-size: 21px;
+    color: #809BC6;
+    display: grid;
+    grid-template-columns: 277px 13px 102px 1fr 90px 59px 70px;
+    grid-template-areas: "logo carrot bread_crumb . howto shop cart";
+    align-items: end;
+    grid-gap: 30px;
+}
+
+#logo{
+    grid-area: logo;
+    justify-self: start;
+}
+
+#carrot{
+    grid-area: carrot;
+    justify-self: start;
+}
+
+#bread_crumb{
+    grid-area: bread_crumb;
+    justify-self: start;
+    color: inherit;
+}
+
+#howto{
+    grid-area: howto;
+    justify-self: end;
+}
+
+#shop{
+    grid-area: shop;
+    justify-self: end;
+}
+
+#cart{
+    grid-area: cart;
+    justify-self: end;
+}
+
+#bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+body {
+    background-image: url("gallery_background.png");
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+   }
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "flow cart_contents";
+    align-content: initial;
+
+}
+
+#flow {
+    grid-area: flow;
+    align-self: center;
+    text-align: center;
+}
