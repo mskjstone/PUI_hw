@@ -87,6 +87,11 @@ body {
     grid-row: 2 / span 7;
 }
 
+.selectable {
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 3px;
+}
 #thumb1 {
     grid-row-start: 9;
     grid-column-start: 2;
@@ -132,13 +137,17 @@ body {
 
 #currentcolor {
     grid-row-start: 4;
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
 }
 
 #color1 {
     grid-row-start: 5;
     grid-column-start: 6;
     align-self: initial;
+    border-style: solid;
+    border-color: #809BC6;
+    /* marsala: #863522 */
+    border-width: 3px;
 }
 
 #color2 {
@@ -183,6 +192,9 @@ body {
     grid-row-start: 8;
     grid-column-start: 6;
     align-self: initial;
+    border-style: solid;
+    border-color: #809BC6;
+    border-width: 3px;
 }
 
 #fill2 {
