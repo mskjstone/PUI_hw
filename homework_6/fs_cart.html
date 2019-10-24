@@ -16,54 +16,56 @@
             <a href="fs_cart.html" id="bread_crumb">CHECKOUT</a>
             <a id = "howto">HOW-TO</a>
             <a id = "shop">SHOP</a>
-            <a id= "cart"><img src="cart.png" alt="cart"></a>
+            <a id= "cart" href = "fs_cart.html"><img src="cart.png" alt="cart"></a>
+            <a id = "cart_qty">3</a>
         </nav>
         <img src="bar.png" alt="bar" id="bar">
     </header>
    <div class = "grid">
        <div id = "flow">
             <div>Great choices, style maven.</div>
-            <div>Ready to check out?</div>
-            <button>Sign in</button>
-            <div>OR</div>
-            <button>Guest checkout</button>
+            <br>
+            <div id="ready">Ready to check out?</div>
+            <br>
+            <br>
+            <button id="b1">SIGN IN</button>
+            <div>or</div>
+            <button id="b2">Guest checkout</button>
         </div>
         <div id = "cart_contents">
-            <h1>Your Cart</h1>
-            <div id="item1">
-                <button>x</button>
-                <div>Couch pillow</div>
-                <div id="price">$50</div>
-                <img src="cart_icon.png">
-                Color: Morning Haze
-                Fill: Poly
-                Qty:   <input type="text" name="qty" placeholder="2" size="3">
-                <button>UPDATE</button>
-                EDIT SELECTION
-            </div>
-            <div id="item2">
-                <button>x</button>
-                <div>Couch pillow</div>
-                <div id="price">$25</div>
-                <img src="cart_icon2.png">
-                Color: After School Special
-                Fill: Foam
-                Qty:   <input type="text" name="qty" placeholder="1" size="3">
-                <button>UPDATE</button>
-                EDIT SELECTION
+            <h1 id="yourcart">Your Cart</h1>
+            <div id="item1" class="item">
+                <button id="x1">x</button>
+                <img id="img1" src="cart_icon.png">
+                <div id="name1">Couch pillow</div>
+                <div id="color1">Color: Morning Haze</div>
+                <div id="fill1">Fill: Poly</div>
+                <a href="fs_product.html" id="edit1" >EDIT SELECTION</a>
+                <div id="price1">$50</div>
+                <a id="qty1">Qty:   <input type="text" name="qty" placeholder="2" size="4.9"></a>
+                <button id="update1">UPDATE</button>
+                <button id="x2">x</button>
+                <img id="img2" src="cart_icon2.png">
+                <div id="name2">Couch pillow</div>
+                <div id="color2">Color: After School Special</div>
+                <div id="fill2">Fill: Foam</div>
+                <a href="fs_product.html" id="edit2" >EDIT SELECTION</a>
+                <div id="price2">$25</div>
+                <a id="qty2">Qty:   <input type="text" name="qty" placeholder="1" size="4.9"></a>
+                <button id="update2">UPDATE</button>
             </div>
             <hr>
-            SUBTOTAL
-            $75
-            tax
-            $7.50
-            shipping
-            $5
+            <div class="subtotal">
+                <span id="sub">SUBTOTAL</span><span id="subprice">$75</span>
+                <span id="tax">tax</span><span id="taxprice">$7.50</span>
+                <span id="ship">shipping</span><span id="shipcost">$5</span>
+                <input id="promo" type="text" name='promo' placeholder="Have a promo code?">
+                <button id="apply">Apply</button>    
+            </div>
             <hr>
-            <button>Apply</button>
-            <input type="text" name='promo' placeholder="Have a promo code?">
-            <h3>TOTAL</h3>
-            $87.50
+            <div class="total">
+                <span id="total">TOTAL</span><span id="totalcost">$87.50</span>
+            </div>
         </div>
    </div>     
 </body>
