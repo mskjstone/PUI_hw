@@ -1,14 +1,48 @@
 var cart_qty = 0;
+var cart_contents = [];
+
+function Pillow(color,fill,qty,price,img) {
+    this.color = color;
+    this.fill = fill;
+    this.qty = qty;
+    this.price = price;
+    this.img = img;
+}
 
 function addToCart() {
-    // debugger;
+    // get number added to cart
     var cart_added_qty = document.getElementById("qty_select").value;
     cart_added_qty = parseInt(cart_added_qty,10);
-    // debugger;
+    // add to existing cart qty
     cart_qty = cart_qty + cart_added_qty;
+    //style cart badge
     document.getElementById("cart_qty").textContent = cart_qty;
     document.getElementById("cart_qty").style.background = "#8F351F";
+    //get pillow attributes
+    // var qty = parseInt(document.getElementById("cart_qty").textContent);
+    var qty = cart_added_qty; /*this is struggling - getting total and not single instance selected*/
+    var color = document.getElementById("currentcolor").textContent;
+    var fill = document.getElementById("currentfill").textContent;
+    var price = 25*qty;
+    let img;
+    if (color.includes("Haze")) {
+        img = 'cart_icon.png';
+    } else if (color.includes("School")) {
+        img = 'cart_icon2.png';
+    } else if (color.includes("Denim")) {
+        img = 'thumb1_denim.png';
+    } else if (color.includes("Rainy")) {
+        img = 'thumb1_rainy.png';
+    } 
+    //append new pillow to cart_contents
+    cart_contents.push(new Pillow(color,fill,qty, price, img));
+    console.log(cart_contents);
+    //local storage
+    localStorage.setItem("couchCart", JSON.stringify(cart_contents));
+    localStorage.setItem("cart_qty",cart_qty);
+    //prints ok but needs to return a value?
 }
+
 
 //approach https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_if_id
 
@@ -21,7 +55,7 @@ function selectColor(clicked) {
     document.getElementById("color3").style.borderColor = "#FFFFFF";
     document.getElementById("color4").style.borderColor = "#FFFFFF";
     //text
-    document.getElementById("currentcolor").textContent = "Current selection: Morning Haze";
+    document.getElementById("currentcolor").textContent = "Color: Morning Haze";
     //main =
     document.getElementById("productmain").src = "productmain.png";
     //thumb 
@@ -36,7 +70,7 @@ function selectColor(clicked) {
       document.getElementById("color3").style.borderColor = "#FFFFFF";
       document.getElementById("color4").style.borderColor = "#FFFFFF";
       // text
-      document.getElementById("currentcolor").textContent = "Current selection: After School Special";
+      document.getElementById("currentcolor").textContent = "Color: After School Special";
       //main
       document.getElementById("productmain").src = "main_school.png";
       //thumbs
@@ -51,7 +85,7 @@ function selectColor(clicked) {
       document.getElementById("color3").style.borderColor = "#863522";
       document.getElementById("color4").style.borderColor = "#FFFFFF";
       //text
-      document.getElementById("currentcolor").textContent = "Current selection: Cozy Denim";
+      document.getElementById("currentcolor").textContent = "Color: Cozy Denim";
       //main
       document.getElementById("productmain").src = "main_denim.png";
       //thumbs
@@ -67,7 +101,7 @@ function selectColor(clicked) {
       document.getElementById("color3").style.borderColor = "white";
       document.getElementById("color4").style.borderColor = "#863522";
       // text
-      document.getElementById("currentcolor").textContent = "Current selection: Rainy Day";
+      document.getElementById("currentcolor").textContent = "Color: Rainy Day";
       //main
       document.getElementById("productmain").src = "main_rainy.png";
       //thumbs
@@ -83,17 +117,17 @@ function selectColor(clicked) {
 function selectFill(clicked) {
     var id = clicked.id;
     if (id === "fill1") {
-        document.getElementById("currentfill").textContent = "Current selection: Poly fill";
+        document.getElementById("currentfill").textContent = "Fill: Poly";
         document.getElementById("fill1").style.borderColor = "#863522";
         document.getElementById("fill2").style.borderColor = "white";
         document.getElementById("fill3").style.borderColor = "white";
       } else if (id === "fill2") {
-        document.getElementById("currentfill").textContent = "Current selection: Down fill";
+        document.getElementById("currentfill").textContent = "Fill: Down";
         document.getElementById("fill1").style.borderColor = "white";
         document.getElementById("fill2").style.borderColor = "#863522";
         document.getElementById("fill3").style.borderColor = "white";
       } else {
-        document.getElementById("currentfill").textContent = "Current selection: Foam fill";
+        document.getElementById("currentfill").textContent = "Fill: Foam";
         document.getElementById("fill1").style.borderColor = "white";
         document.getElementById("fill2").style.borderColor = "white";
         document.getElementById("fill3").style.borderColor = "#863522";
@@ -138,3 +172,4 @@ function selectThumb(clicked) {
         document.getElementById("productmain").src = "m4_morning.png";
     }
 }
+

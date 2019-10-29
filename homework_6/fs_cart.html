@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="cart_style.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script src="cart.js"></script>
 </head>
-<body>
+<body onload="onLoad()">
     <header>
         <nav>
             <a id="logo" href="index.html"><img src="fs_logo.png" alt="logo"></a>
@@ -17,7 +19,7 @@
             <a id = "howto">HOW-TO</a>
             <a id = "shop">SHOP</a>
             <a id= "cart" href = "fs_cart.html"><img src="cart.png" alt="cart"></a>
-            <a id = "cart_qty">3</a>
+            <a id = "cart_qty"></a>
         </nav>
         <img src="bar.png" alt="bar" id="bar">
     </header>
@@ -36,35 +38,38 @@
             <h1 id="yourcart">Your Cart</h1>
             <div id="item1" class="item">
                 <button id="x1">x</button>
-                <img id="img1" src="cart_icon.png">
+                <img id="img1" src="thumb1.png">
+                 
                 <div id="name1">Couch pillow</div>
                 <div id="color1">Color: Morning Haze</div>
                 <div id="fill1">Fill: Poly</div>
                 <a href="fs_product.html" id="edit1" >EDIT SELECTION</a>
                 <div id="price1">$50</div>
-                <a id="qty1">Qty:   <input type="text" name="qty" placeholder="2" size="4.9"></a>
+                <a id="qty1">Qty:   <input id='qtyattribute' type="text" name="qty" placeholder="2" size="4.9" value="0"></a>
                 <button id="update1">UPDATE</button>
-                <button id="x2">x</button>
-                <img id="img2" src="cart_icon2.png">
-                <div id="name2">Couch pillow</div>
-                <div id="color2">Color: After School Special</div>
-                <div id="fill2">Fill: Foam</div>
-                <a href="fs_product.html" id="edit2" >EDIT SELECTION</a>
-                <div id="price2">$25</div>
-                <a id="qty2">Qty:   <input type="text" name="qty" placeholder="1" size="4.9"></a>
-                <button id="update2">UPDATE</button>
             </div>
+            <!-- <div class = "item">
+                <button id="x1">x</button>
+                <img id="img1" src="cart_icon2.png">
+                <div id="name1">Couch pillow</div>
+                <div id="color1">Color: After School Special</div>
+                <div id="fill1">Fill: Foam</div>
+                <a href="fs_product.html" id="edit1" >EDIT SELECTION</a>
+                <div id="price1">$25</div>
+                <a id="qty1">Qty:   <input type="text" name="qty" placeholder="1" size="4.9"></a>
+                <button id="update1">UPDATE</button>
+            </div>  -->
             <hr>
             <div class="subtotal">
-                <span id="sub">SUBTOTAL</span><span id="subprice">$75</span>
-                <span id="tax">tax</span><span id="taxprice">$7.50</span>
-                <span id="ship">shipping</span><span id="shipcost">$5</span>
+                <span id="sub">SUBTOTAL</span><span id="subprice"></span>
+                <span id="tax">tax</span><span id="taxprice"></span>
+                <span id="ship">shipping</span><span id="shipcost"></span>
                 <input id="promo" type="text" name='promo' placeholder="Have a promo code?">
                 <button id="apply">Apply</button>    
             </div>
             <hr>
             <div class="total">
-                <span id="total">TOTAL</span><span id="totalcost">$87.50</span>
+                <span id="total">TOTAL</span><span id="totalcost"></span>
             </div>
         </div>
    </div>     
