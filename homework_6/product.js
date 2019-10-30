@@ -1,3 +1,5 @@
+//if localstorage exists
+
 var cart_qty = 0;
 var cart_contents = [];
 
