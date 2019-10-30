@@ -1,9 +1,21 @@
 //if localstorage exists
 var cart_contents = JSON.parse(localStorage.getItem("couchCart"));
-if (cart_contents == null) {cart_contents = []}
-    else {};
-var cart_qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
+var cart_qty = 0;
+if (cart_contents == null) {
+    cart_contents = [];
+    cart_qty = 0;
+}
+
+else{
+    cart_qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
+}
+
+// var cart_qty = JSON.parse(localStorage.getItem("cart_qty"));
+// if (cart_qty == null) {cart_qty = 0}
+//     else {};
 //unexpected token n - because parsing nan?
+
+console.log("im here");
 console.log(cart_contents,cart_qty);
 
 function onLoad() { 
