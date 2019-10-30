@@ -1,7 +1,7 @@
 //if localstorage exists
 var cart_contents = JSON.parse(localStorage.getItem("couchCart"));
 var cart_qty = 0;
-if (cart_contents == null) {
+if ( (cart_contents == null) || (cart_contents.length == 0) ){
     cart_contents = [];
     cart_qty = 0;
 }
