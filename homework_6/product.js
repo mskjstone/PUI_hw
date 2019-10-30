@@ -1,7 +1,17 @@
 //if localstorage exists
+var cart_contents = JSON.parse(localStorage.getItem("couchCart"));
+var cart_qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
+console.log(cart_contents,cart_qty);
 
-var cart_qty = 0;
-var cart_contents = [];
+function onLoad() { 
+    if (cart_qty < 1) {
+    document.getElementById("cart_qty").textContent = cart_qty;
+    document.getElementById("cart_qty").style.background = "#FFFFFF";
+    } else {
+    document.getElementById("cart_qty").textContent = cart_qty;
+    document.getElementById("cart_qty").style.background = "#8F351F";
+    }
+}
 
 function Pillow(color,fill,qty,price,img) {
     this.color = color;
@@ -15,6 +25,7 @@ function addToCart() {
     // get number added to cart
     var cart_added_qty = document.getElementById("qty_select").value;
     cart_added_qty = parseInt(cart_added_qty,10);
+    if (cart_added_qty > 0) {
     // add to existing cart qty
     cart_qty = cart_qty + cart_added_qty;
     //style cart badge
@@ -22,7 +33,7 @@ function addToCart() {
     document.getElementById("cart_qty").style.background = "#8F351F";
     //get pillow attributes
     // var qty = parseInt(document.getElementById("cart_qty").textContent);
-    var qty = cart_added_qty; /*this is struggling - getting total and not single instance selected*/
+    var qty = cart_added_qty; 
     var color = document.getElementById("currentcolor").textContent;
     var fill = document.getElementById("currentfill").textContent;
     var price = 25*qty;
@@ -43,6 +54,8 @@ function addToCart() {
     localStorage.setItem("couchCart", JSON.stringify(cart_contents));
     localStorage.setItem("cart_qty",cart_qty);
     //prints ok but needs to return a value?
+    }
+    else {};
 }
 
 
@@ -174,4 +187,3 @@ function selectThumb(clicked) {
         document.getElementById("productmain").src = "m4_morning.png";
     }
 }
-

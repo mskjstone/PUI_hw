@@ -2,38 +2,33 @@ var cc = JSON.parse(localStorage.getItem("couchCart"));
 var qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
 
 function onLoad() {
+    console.log(qty);
     document.getElementById('cart_list').innerHTML="";
     //style cart badge
     document.getElementById("cart_qty").textContent = qty;
-    document.getElementById("cart_qty").style.background = "#8F351F";
+    if (qty < 1) {
+        document.getElementById("cart_qty").style.background = "#FFFFFF";
+        } else {
+        document.getElementById("cart_qty").style.background = "#8F351F";
+        }
     //insert totals
     var subtotal = qty*25;
     document.getElementById("subprice").textContent = '$'+subtotal;
     var tax = subtotal*0.1;
     document.getElementById("taxprice").textContent = '$'+tax;
-    var shipping = 5;
+    let shipping;
+    if (qty < 1) {shipping = 0} else if (qty >= 1) {shipping = 5};
     document.getElementById("shipcost").textContent = '$'+shipping;
     var total = subtotal + tax + shipping;
     document.getElementById("totalcost").textContent = '$'+total;
-    //also need to append child after iterating through loop   
     var i;
 
-    console.log("test1");
+    // console.log("test1");
 
     for (i=0; i < cc.length; i++) {
         var item = document.createElement('div'); //need to make sure this goes inside div id = cart contents and below h1 your cart?
-        console.log("test2");
+        // console.log("test2");
         item.className = 'item';
-        // var image;
-        // if (cc[i].color.includes("Haze")) {
-        //     image = 'cart_icon.png';
-        // } else if (cc[i].color.includes("School")) {
-        //     image = 'cart_icon2.png';
-        // } else if (cc[i].color.includes("Denim")) {
-        //     image = 'thumb1_denim.png';
-        // } else if (cc[i].color.includes("Rainy")) {
-        //     image = 'thumb1_rainy.png';
-        // } 
         var img = cc[i].img;
         item.innerHTML  = '<button class = "x" id="x' + i + '" onclick="removeItem(this.id)">x</button>'; //insert remove function here
         item.innerHTML += '<img id="img1" src=' +img +'>'; //how do i make this a variable
