@@ -1,19 +1,21 @@
 //if localstorage exists
 var cart_contents = JSON.parse(localStorage.getItem("couchCart"));
+if (cart_contents == null) {cart_contents = []}
+    else {};
 var cart_qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
+//unexpected token n - because parsing nan?
 console.log(cart_contents,cart_qty);
 
 function onLoad() { 
-    if (cart_qty < 1) {
     document.getElementById("cart_qty").textContent = cart_qty;
-    document.getElementById("cart_qty").style.background = "#FFFFFF";
-    } else {
-    document.getElementById("cart_qty").textContent = cart_qty;
-    document.getElementById("cart_qty").style.background = "#8F351F";
+    if (cart_qty == 0) {
+        document.getElementById("cart_qty").style.background = "#FFFFFF";
+        } else if (cart_qty > 0) {
+        document.getElementById("cart_qty").style.background = "#8F351F";
+        } else {document.getElementById("cart_qty").style.background = "#FFFFFF";}
     }
-}
 
-function Pillow(color,fill,qty,price,img) {
+    function Pillow(color,fill,qty,price,img) {
     this.color = color;
     this.fill = fill;
     this.qty = qty;
@@ -46,7 +48,7 @@ function addToCart() {
         img = 'thumb1_denim.png';
     } else if (color.includes("Rainy")) {
         img = 'thumb1_rainy.png';
-    } 
+    }
     //append new pillow to cart_contents
     cart_contents.push(new Pillow(color,fill,qty, price, img));
     console.log(cart_contents);
@@ -56,7 +58,9 @@ function addToCart() {
     //prints ok but needs to return a value?
     }
     else {};
+
 }
+
 
 
 //approach https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_if_id
@@ -187,3 +191,4 @@ function selectThumb(clicked) {
         document.getElementById("productmain").src = "m4_morning.png";
     }
 }
+

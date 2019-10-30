@@ -6,11 +6,12 @@ function onLoad() {
     document.getElementById('cart_list').innerHTML="";
     //style cart badge
     document.getElementById("cart_qty").textContent = qty;
-    if (qty < 1) {
+    if (qty == 0) {
         document.getElementById("cart_qty").style.background = "#FFFFFF";
-        } else {
+        } else if (qty > 0) {
         document.getElementById("cart_qty").style.background = "#8F351F";
-        }
+        } else {document.getElementById("cart_qty").style.background = "#FFFFFF";
+    }
     //insert totals
     var subtotal = qty*25;
     document.getElementById("subprice").textContent = '$'+subtotal;
