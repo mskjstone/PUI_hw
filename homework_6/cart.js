@@ -27,12 +27,12 @@ function onLoad() {
     // console.log("test1");
 
     for (i=0; i < cc.length; i++) {
-        var item = document.createElement('div'); //need to make sure this goes inside div id = cart contents and below h1 your cart?
+        var item = document.createElement('div'); 
         // console.log("test2");
         item.className = 'item';
         var img = cc[i].img;
-        item.innerHTML  = '<button class = "x" id="x' + i + '" onclick="removeItem(this.id)">x</button>'; //insert remove function here
-        item.innerHTML += '<img id="img1" src=' +img +'>'; //how do i make this a variable
+        item.innerHTML  = '<button class = "x" id="x' + i + '" onclick="removeItem(this.id)">x</button>'; 
+        item.innerHTML += '<img id="img1" src=' +img +'>'; 
         item.innerHTML += '<div id="name1">Couch pillow</div>';
         item.innerHTML += '<div id="color1">' + cc[i].color + '</div>';
         item.innerHTML += '<div id="fill1">' + cc[i].fill + '</div>';
@@ -40,20 +40,6 @@ function onLoad() {
         item.innerHTML += '<div id="price1">$' + cc[i].price + '</div>';
         item.innerHTML += '<a id="qty1">Qty:   <input type="text" name="qty" placeholder="' + cc[i].qty +'" value ="' + cc[i].qty + '" size="4.9"></a>';
         item.innerHTML += '<button id="update1">UPDATE</button>';
-        // document.getElementById("color1").textContent = cc[i].color;
-        // document.getElementById("fill1").textContent = cc[i].fill;
-        // document.getElementById("price1").textContent = '$'+cc[i].price;
-        // document.getElementById("qtyattribute").placeholder = cc[i].qty;
-        // document.getElementById("qtyattribute").value = cc[i].qty;
-        // if (cc[i].color.includes("Haze")) {
-        //     document.getElementById("img1").src = 'cart_icon.png';
-        // } else if (cc[i].color.includes("School")) {
-        //     document.getElementById("img1").src = 'cart_icon2.png';
-        // } else if (cc[i].color.includes("Denim")) {
-        //     document.getElementById("img1").src = 'thumb1_denim.png';
-        // } else if (cc[i].color.includes("Rainy")) {
-        //     document.getElementById("img1").src = 'thumb1_rainy.png';
-        // } 
         var p = document.getElementById('cart_list');
         p.appendChild(item);
         console.log(p);

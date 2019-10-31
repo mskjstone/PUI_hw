@@ -10,14 +10,6 @@ else{
     cart_qty = parseInt(JSON.parse(localStorage.getItem("cart_qty")));
 }
 
-// var cart_qty = JSON.parse(localStorage.getItem("cart_qty"));
-// if (cart_qty == null) {cart_qty = 0}
-//     else {};
-//unexpected token n - because parsing nan?
-
-console.log("im here");
-console.log(cart_contents,cart_qty);
-
 function onLoad() { 
     document.getElementById("cart_qty").textContent = cart_qty;
     if (cart_qty == 0) {
@@ -27,7 +19,7 @@ function onLoad() {
         } else {document.getElementById("cart_qty").style.background = "#FFFFFF";}
     }
 
-    function Pillow(color,fill,qty,price,img) {
+function Pillow(color,fill,qty,price,img) {
     this.color = color;
     this.fill = fill;
     this.qty = qty;
@@ -46,7 +38,6 @@ function addToCart() {
     document.getElementById("cart_qty").textContent = cart_qty;
     document.getElementById("cart_qty").style.background = "#8F351F";
     //get pillow attributes
-    // var qty = parseInt(document.getElementById("cart_qty").textContent);
     var qty = cart_added_qty; 
     var color = document.getElementById("currentcolor").textContent;
     var fill = document.getElementById("currentfill").textContent;
@@ -67,7 +58,6 @@ function addToCart() {
     //local storage
     localStorage.setItem("couchCart", JSON.stringify(cart_contents));
     localStorage.setItem("cart_qty",cart_qty);
-    //prints ok but needs to return a value?
     }
     else {};
 
