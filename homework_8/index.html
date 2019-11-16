@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Design Process</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery must also be linked for Bootstrap to function-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- D3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <!-- script   -->
+  <script src="index.js"></script>
+  <!-- style -->
+    <link rel="stylesheet" type="text/css" href="index_style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Khula:300&display=swap" rel="stylesheet">
+  
+</head>
+
+<header>
+    <!-- make responsive topnav https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="name">katie johnstone</div>
+                <span id="joyful">joyful </span><span id="meaningful">meaningful </span><span id="design">design</span>
+            </div>
+            <div class="col-sm-8" id="rightnav">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fas fa-bars fa-1x"></i>
+                <a>projects</a>
+                <a class="active">process</a>
+                <a>about</a>
+                <a>resume</a>
+                <hr>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <!--This is the container for the grid in Bootstrap-->
+    <div class="container-fluid">
+        <h2>my design process</h2>
+        <p>hover/tap each node to read more.</p>
+        <div class="row" id ="radardiv">
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- anime.js for animation - has a lot of documentation-->
+<!-- svg path animations https://www.jotform.com/blog/anime-js-css-svg-98489/ -->
+<!--  https://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html -->

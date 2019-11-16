@@ -1,0 +1,57 @@
+body {
+    margin: 15px 20px 15px 5px;
+    font-family: 'Khula', sans-serif;
+}
+
+#name {
+    font-size: 30px;
+}
+#rightnav {
+    text-align:right;
+    padding-top: 15px;
+}
+
+#rightnav a {
+    padding-left: 20px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.icon {
+    display: none;
+  }
+  
+  #rightnav a {
+    color: black;
+  }
+
+  /* Add an active class to highlight the current page */
+  #rightnav a.active {
+    color: #DE9302;
+  }
+
+@media screen and (max-width: 770px) {
+    #rightnav a:not(:first-child) {display: none;}
+    #rightnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 770px) {
+    #rightnav.responsive {position: relative;}
+    #rightnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #rightnav.responsive a {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+  }
